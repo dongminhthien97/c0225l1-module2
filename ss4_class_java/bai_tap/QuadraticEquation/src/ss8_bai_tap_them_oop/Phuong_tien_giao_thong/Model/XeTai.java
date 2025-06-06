@@ -1,0 +1,20 @@
+package ss8_bai_tap_them_oop.Phuong_tien_giao_thong.Model;
+
+public class XeTai extends PhuongTienGiaoThong {
+    private double trongTai;
+
+    public XeTai() {}
+
+    public XeTai(String bienKiemSoat, String tenHangSanXuat, String namSanXuat, String chuSoHuu, double trongTai) {
+        super(bienKiemSoat, tenHangSanXuat, namSanXuat, chuSoHuu);
+        this.trongTai = trongTai;
+    }
+
+    public double getTrongTai() {
+        return trongTai;
+    }
+
+    public void setTrongTai(double trongTai) {
+        this.trongTai = trongTai;
+    }
+}

@@ -1,45 +1,49 @@
 package bai_tap_CRUD;
 
-import java.sql.SQLOutput;
-import java.util.Scanner;
-
 public class Product {
-    public static void main(String[] args) {
-    Display();
+    private int id;
+    private String name;
+    private double price;
+
+    public Product() {
     }
-    public static void Display(){
-        final int CREATE = 1;
-        final int READ = 2;
-        final int UPDATE = 3;
-        final int DELETE = 4;
-        Scanner sc = new Scanner(System.in);
-        boolean flag = true;
-        while(flag){
-            System.out.println("-----Choose options-----" +
-                    "1. Create"
-                    + "2. Read"
-                    + "3. Update"
-                    + "4. Delete");
-            int option = Integer.parseInt(sc.nextLine());
-            switch(option){
-                case CREATE:
-                    System.out.println("Enter product ID: ");
-                    String id = sc.nextLine();
-                    System.out.println("Enter product name: ");
-                    String name = sc.nextLine();
-                    System.out.println("Enter product price: ");
-                    double price = Double.parseDouble(sc.nextLine());
-                    break;
-                case READ:
-                    System.out.println("Enter product ID: ");
-                    break;
-                case UPDATE:
-                    System.out.println("Enter product ID: ");
-                    break;
-                case DELETE:
-                    System.out.println("Enter product ID: ");
-                    break;
-            }
-        }
+
+    public Product(int id, String name, double price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
+
+    public int getid() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setid(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "ID='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
