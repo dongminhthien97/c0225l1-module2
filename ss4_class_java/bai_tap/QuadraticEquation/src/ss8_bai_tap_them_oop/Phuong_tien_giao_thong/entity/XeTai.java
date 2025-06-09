@@ -1,4 +1,4 @@
-package ss8_bai_tap_them_oop.Phuong_tien_giao_thong.Model;
+package ss8_bai_tap_them_oop.Phuong_tien_giao_thong.entity;
 
 public class XeTai extends PhuongTienGiaoThong {
     private double trongTai;
@@ -16,5 +16,16 @@ public class XeTai extends PhuongTienGiaoThong {
 
     public void setTrongTai(double trongTai) {
         this.trongTai = trongTai;
+    }
+
+    @Override
+    public String toString() {
+        return "XeTai{" +
+                "trongTai=" + trongTai +
+                ", bienKiemSoat='" + bienKiemSoat + '\'' +
+                ", tenHangSanXuat='" + tenHangSanXuat + '\'' +
+                ", namSanXuat='" + namSanXuat + '\'' +
+                ", chuSoHuu='" + chuSoHuu + '\'' +
+                '}';
     }
 }

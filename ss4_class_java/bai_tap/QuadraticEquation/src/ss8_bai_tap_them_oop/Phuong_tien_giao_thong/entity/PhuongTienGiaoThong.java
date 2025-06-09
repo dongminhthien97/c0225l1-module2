@@ -1,6 +1,6 @@
-package ss8_bai_tap_them_oop.Phuong_tien_giao_thong.Model;
+package ss8_bai_tap_them_oop.Phuong_tien_giao_thong.entity;
 
-public class PhuongTienGiaoThong {
+public abstract class PhuongTienGiaoThong {
     public String bienKiemSoat;
     public String tenHangSanXuat;
     public String namSanXuat;

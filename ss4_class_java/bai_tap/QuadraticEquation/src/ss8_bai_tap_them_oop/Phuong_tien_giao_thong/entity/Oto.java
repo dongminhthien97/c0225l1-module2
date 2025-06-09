@@ -1,4 +1,4 @@
-package ss8_bai_tap_them_oop.Phuong_tien_giao_thong.Model;
+package ss8_bai_tap_them_oop.Phuong_tien_giao_thong.entity;
 
 public class Oto extends PhuongTienGiaoThong {
     private double soChoNgoi;
@@ -27,5 +27,17 @@ public class Oto extends PhuongTienGiaoThong {
 
     public void setKieuXe(String kieuXe) {
         this.kieuXe = kieuXe;
+    }
+
+    @Override
+    public String toString() {
+        return "Oto{" +
+                "soChoNgoi=" + soChoNgoi +
+                ", kieuXe='" + kieuXe + '\'' +
+                ", bienKiemSoat='" + bienKiemSoat + '\'' +
+                ", tenHangSanXuat='" + tenHangSanXuat + '\'' +
+                ", namSanXuat='" + namSanXuat + '\'' +
+                ", chuSoHuu='" + chuSoHuu + '\'' +
+                '}';
     }
 }
