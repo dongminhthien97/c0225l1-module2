@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MainController {
     public static void main(String[] args) {
-
+        displayMenu();
     }
 
     public static void displayMenu(){
@@ -15,5 +15,12 @@ public class MainController {
         System.out.println("2. Hiển thị danh sách");
         System.out.println("3. Xoá phương tiện");
         System.out.println("4. Thoát chương trình");
+
+        int choice = Integer.parseInt(scanner.nextLine());
+        switch (choice) {
+            case 1:
+
+        }
+
     }
 }
