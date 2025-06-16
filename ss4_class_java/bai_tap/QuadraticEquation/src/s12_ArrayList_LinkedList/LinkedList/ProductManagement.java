@@ -2,12 +2,19 @@ package s12_ArrayList_LinkedList.LinkedList;
 
 
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Scanner;
 
 public class ProductManagement {
-    private LinkedList<Product> productList = new LinkedList<>();
+    private ArrayList<Product> productList = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
+
+    public ProductManagement() {
+        productList.add(new Product(1,"laptop",1000));
+        productList.add(new Product(2,"Iphone",1400));
+        productList.add(new Product(3,"Desktop",1300));
+    }
 
     public void addProduct(){
         System.out.println("Enter id: ");
@@ -61,6 +68,33 @@ public class ProductManagement {
         }
     }
 
+    public void searchByName(){
+        System.out.println("Enter name: ");
+        String name = scanner.nextLine();
+        List<Product> result = SearchProduct(name);
+        if(result.isEmpty()){
+            System.out.println("Product list is empty");
+        }else{
+            for (Product product : result){
+                System.out.println(product);
+            }
+        }
+    }
+
+    public List<Product> SearchProduct(String name){
+        List<Product> result = new ArrayList<>();
+        for (Product product : productList){
+            if(product.getName().toLowerCase().contains(name.toLowerCase())){
+                result.add(product);
+            }
+        }
+        return result;
+    }
+
+    public void sortProductByPriceAscending(){
+        productList.sort(Comparator.comparingDouble(Product::getPrice));
+    }
+
     public void menu(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("-----Choose options-----" + "\n" +
@@ -68,7 +102,9 @@ public class ProductManagement {
                 + "2. Display" + "\n"
                 + "3. Update" + "\n"
                 + "4. Delete" + "\n"
-                + "5. Exit");
+                + "5. Search"+ "\n"
+                + "6.SortByPrice" + "\n"
+                + "7. Exit");
         boolean flag = true;
         while(flag){
             int choices = Integer.parseInt(scanner.nextLine());
@@ -86,6 +122,14 @@ public class ProductManagement {
                     deleteProduct();
                     break;
                 case 5:
+                    searchByName();
+                    break;
+                case 6:
+                    sortProductByPriceAscending();
+                    System.out.println(productList);
+                    System.out.println("Product sorted successfully");
+                    break;
+                case 7:
                     System.out.println("Goodbye!!");
                     flag = false;
                     break;
