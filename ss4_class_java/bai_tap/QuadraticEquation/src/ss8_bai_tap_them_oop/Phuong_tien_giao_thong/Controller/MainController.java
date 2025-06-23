@@ -19,7 +19,13 @@ public class MainController {
         int choice = Integer.parseInt(scanner.nextLine());
         switch (choice) {
             case 1:
-
+                System.out.println("1. Thêm xe tải" +
+                        "\n" + "2. Thêm oto" +"\n" +
+                        "3. Thêm xe máy");
+                int type = Integer.parseInt(scanner.nextLine());
+                switch (type) {
+                    case 1:
+                }
         }
 
     }

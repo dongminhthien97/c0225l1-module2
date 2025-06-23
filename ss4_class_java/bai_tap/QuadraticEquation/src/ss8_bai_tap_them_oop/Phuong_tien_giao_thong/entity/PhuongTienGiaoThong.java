@@ -15,4 +15,8 @@ public abstract class PhuongTienGiaoThong {
         this.namSanXuat = namSanXuat;
         this.chuSoHuu = chuSoHuu;
     }
+
+    public String getBienKiemSoat() {
+        return bienKiemSoat;
+    }
 }
