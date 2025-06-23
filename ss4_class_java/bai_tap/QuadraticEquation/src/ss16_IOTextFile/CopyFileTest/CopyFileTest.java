@@ -19,10 +19,12 @@ public class CopyFileTest {
 
             if(!sourcefile.exists()){
                 System.out.println("Source file does not exist");
+                return;
             }
 
             if(destinationfile.exists()){
                 System.out.println("Destination file already exists");
+                return;
             }
 
             reader = new BufferedReader(new FileReader(sourcefile));
